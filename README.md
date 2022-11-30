@@ -26,8 +26,8 @@ This is a very basic example.
 Include **module.acr.tf** this repository as a module in your existing Terraform code:
 
 ```terraform
-module "acr" {
-  source      = "JamesWoolfenden/acr/azurerm"
+module "apim" {
+  source      = "JamesWoolfenden/apim/azurerm"
   version     = "v0.1.1"
   acr         = var.acr
 }
