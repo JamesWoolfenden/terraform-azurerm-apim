@@ -8,9 +8,11 @@ variable "location" {
 
 variable "api" {
   type = object({
-    name            = string
-    publisher_name  = string
-    publisher_email = string
-    sku_name        = string
+    name                 = string
+    publisher_name       = string
+    publisher_email      = string
+    sku_name             = string
+    subnet_id            = string
+    virtual_network_type = string
   })
 }

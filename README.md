@@ -58,7 +58,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_api"></a> [api](#input\_api) | n/a | <pre>object({<br>    name            = string<br>    publisher_name  = string<br>    publisher_email = string<br>    sku_name        = string<br>  })</pre> | n/a | yes |
+| <a name="input_api"></a> [api](#input\_api) | n/a | <pre>object({<br>    name                 = string<br>    publisher_name       = string<br>    publisher_email      = string<br>    sku_name             = string<br>    subnet_id            = string<br>    virtual_network_type = string<br>  })</pre> | n/a | yes |
 | <a name="input_client_certificate"></a> [client\_certificate](#input\_client\_certificate) | n/a | `bool` | `true` | no |
 | <a name="input_location"></a> [location](#input\_location) | n/a | `string` | n/a | yes |
 | <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | n/a | `string` | n/a | yes |
