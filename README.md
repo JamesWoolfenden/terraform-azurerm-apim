@@ -52,26 +52,20 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_container_registry.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry) | resource |
+| [azurerm_api_management.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/api_management) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_acr"></a> [acr](#input\_acr) | n/a | <pre>object({<br>    name                = string,<br>    resource_group_name = string<br>    location            = string<br>    sku                 = string<br>  })</pre> | n/a | yes |
-| <a name="input_anonymous_pull"></a> [anonymous\_pull](#input\_anonymous\_pull) | n/a | `bool` | `false` | no |
-| <a name="input_encryption"></a> [encryption](#input\_encryption) | n/a | <pre>object({<br>    enabled            = bool<br>    key_vault_key_id   = string<br>    identity_client_id = string<br>  })</pre> | n/a | yes |
-| <a name="input_public_network_access"></a> [public\_network\_access](#input\_public\_network\_access) | n/a | `bool` | `false` | no |
-| <a name="input_quarantine_policy"></a> [quarantine\_policy](#input\_quarantine\_policy) | n/a | `bool` | `true` | no |
-| <a name="input_replications"></a> [replications](#input\_replications) | n/a | <pre>list(object({<br>    location                  = string<br>    regional_endpoint_enabled = bool<br>    zone_redundancy_enabled   = bool<br>    tags                      = map(string)<br>  }))</pre> | n/a | yes |
-| <a name="input_retention_policy"></a> [retention\_policy](#input\_retention\_policy) | n/a | `bool` | `true` | no |
-| <a name="input_trust_policy"></a> [trust\_policy](#input\_trust\_policy) | n/a | `bool` | `true` | no |
+| <a name="input_api"></a> [api](#input\_api) | n/a | <pre>object({<br>    name            = string<br>    publisher_name  = string<br>    publisher_email = string<br>    sku_name        = string<br>  })</pre> | n/a | yes |
+| <a name="input_client_certificate"></a> [client\_certificate](#input\_client\_certificate) | n/a | `bool` | `true` | no |
+| <a name="input_location"></a> [location](#input\_location) | n/a | `string` | n/a | yes |
+| <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | n/a | `string` | n/a | yes |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_registry"></a> [registry](#output\_registry) | n/a |
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Policy
@@ -90,11 +84,13 @@ resource "azurerm_role_definition" "terraform_pike" {
 
   permissions {
     actions = [
-    "Microsoft.ContainerRegistry/registries/delete",
-    "Microsoft.ContainerRegistry/registries/operationStatuses/read",
-    "Microsoft.ContainerRegistry/registries/read",
-    "Microsoft.ContainerRegistry/registries/write",
-    "Microsoft.Resources/subscriptions/resourcegroups/read"]
+    "Microsoft.ApiManagement/service/delete",
+    "Microsoft.ApiManagement/service/operationresults/read",
+    "Microsoft.ApiManagement/service/policies/read",
+    "Microsoft.ApiManagement/service/portalsettings/read",
+    "Microsoft.ApiManagement/service/read",
+    "Microsoft.ApiManagement/service/tenant/listSecrets/action",
+    "Microsoft.ApiManagement/service/write"]
     not_actions = []
   }
 
