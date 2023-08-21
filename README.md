@@ -2,7 +2,7 @@
 
 With Secure Defaults from Checkov
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-azurerm-apim/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-azurerm-apim)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-azurerm-apim/workflows/Verify/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-azurerm-apim)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-azurerm-apim.svg)](https://github.com/JamesWoolfenden/terraform-azurerm-apim/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-azurerm-apim.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-azurerm-apim/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
